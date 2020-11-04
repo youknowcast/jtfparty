@@ -14,6 +14,5 @@ alias Jtfparty.Repo
 alias Jtfparty.Event
 
 # Events
-event = Event.changeset(%Event{}, %{ name: "JTF2021w" })
-Repo.insert!(event)
+Repo.insert!(%Event{ name: "JTF2021w" })
 

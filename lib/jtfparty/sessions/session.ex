@@ -3,8 +3,13 @@ defmodule Jtfparty.Sessions.Session do
   import Ecto.Changeset
 
   schema "sessions" do
-    field :description, :string
+    belongs_to :event, Jtfparty.Event
+    field :place, :string
+    field :timebox, :string
+    field :time, :integer
+    field :youtube_url, :string
     field :title, :string
+    field :description, :string
 
     timestamps()
   end
@@ -12,7 +17,7 @@ defmodule Jtfparty.Sessions.Session do
   @doc false
   def changeset(session, attrs) do
     session
-    |> cast(attrs, [:title, :description])
-    |> validate_required([:title, :description])
+    |> cast(attrs, [:place, :timebox, :youtube_url, :title, :description])
+    |> validate_required([:title])
   end
 end
