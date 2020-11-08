@@ -34,3 +34,20 @@
   display: block;
   margin: -1rem 0 2rem;
 }
+
+main {
+  display: inline-block;
+}
+
+div.menu {
+  display: inline-block;
+  vertical-align: top;
+  ul {
+    list-style: none;
+  }
+}
+
+.twitter-timeline-wrapper {
+  height: 400px;
+  overflow-y: scroll;
+}
