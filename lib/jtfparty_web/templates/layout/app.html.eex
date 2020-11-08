@@ -24,10 +24,38 @@
         </a>
       </section>
     </header>
+    <div class="menu">
+      <ul>
+        <li>
+          JTF とは
+          <ul>
+            <li><a>概要</a></li>
+            <li><a>歴史</a></li>
+          </ul>
+        </li>
+        <li><a>資料</a></li>
+        <li>
+          過去開催分
+          <ul>
+            <li><a>JTF2020</a></li>
+            <li><a>JTF2020w</a></li>
+          </ul>
+        </li>
+        <li><a>メディア</a></li>
+        <li><a>Q&amp;A</a></li>
+      </ul>
+      <div>
+        <input /><button>search</button>
+      </div>
+      <div class="twitter-timeline-wrapper">
+      <a class="twitter-timeline" href="https://twitter.com/techfesta?ref_src=twsrc%5Etfw">Tweets by techfesta</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+    </div>
     <main role="main" class="container">
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
       <%= @inner_content %>
     </main>
+    <footer></footer>
   </body>
 </html>

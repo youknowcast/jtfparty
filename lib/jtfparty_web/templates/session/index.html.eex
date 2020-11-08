@@ -5,6 +5,8 @@
     <tr>
       <th>Title</th>
       <th>Description</th>
+      <th>Place</th>
+      <th>Timebox</th>
 
       <th></th>
     </tr>
@@ -14,15 +16,13 @@
     <tr>
       <td><%= session.title %></td>
       <td><%= session.description %></td>
+      <td><%= session.place %></td>
+      <td><%= session.timebox %>
 
       <td>
         <span><%= link "Show", to: Routes.session_path(@conn, :show, session) %></span>
-        <span><%= link "Edit", to: Routes.session_path(@conn, :edit, session) %></span>
-        <span><%= link "Delete", to: Routes.session_path(@conn, :delete, session), method: :delete, data: [confirm: "Are you sure?"] %></span>
       </td>
     </tr>
 <% end %>
   </tbody>
 </table>
-
-<span><%= link "New Session", to: Routes.session_path(@conn, :new) %></span>

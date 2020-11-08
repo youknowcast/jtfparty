@@ -9,3 +9,10 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+
+alias Jtfparty.Repo
+alias Jtfparty.Event
+
+# Events
+Repo.insert!(%Event{ name: "JTF2021w" })
+
