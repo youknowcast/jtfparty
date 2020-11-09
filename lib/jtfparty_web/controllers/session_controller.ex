@@ -9,12 +9,12 @@ defmodule JtfpartyWeb.SessionController do
     render(conn, "index.html", sessions: sessions)
   end
 
-  def new(conn, _params) do
+  defp new(conn, _params) do
     changeset = Sessions.change_session(%Session{})
     render(conn, "new.html", changeset: changeset)
   end
 
-  def create(conn, %{"session" => session_params}) do
+  defp create(conn, %{"session" => session_params}) do
     case Sessions.create_session(session_params) do
       {:ok, session} ->
         conn
@@ -31,13 +31,13 @@ defmodule JtfpartyWeb.SessionController do
     render(conn, "show.html", session: session)
   end
 
-  def edit(conn, %{"id" => id}) do
+  defp edit(conn, %{"id" => id}) do
     session = Sessions.get_session!(id)
     changeset = Sessions.change_session(session)
     render(conn, "edit.html", session: session, changeset: changeset)
   end
 
-  def update(conn, %{"id" => id, "session" => session_params}) do
+  defp update(conn, %{"id" => id, "session" => session_params}) do
     session = Sessions.get_session!(id)
 
     case Sessions.update_session(session, session_params) do
@@ -51,7 +51,7 @@ defmodule JtfpartyWeb.SessionController do
     end
   end
 
-  def delete(conn, %{"id" => id}) do
+  defp delete(conn, %{"id" => id}) do
     session = Sessions.get_session!(id)
     {:ok, _session} = Sessions.delete_session(session)
 

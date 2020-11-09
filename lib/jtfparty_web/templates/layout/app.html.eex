@@ -29,20 +29,25 @@
         <li>
           JTF とは
           <ul>
-            <li><a>概要</a></li>
-            <li><a>歴史</a></li>
+            <li><a href="/pages/about">概要</a></li>
+            <li><a href="/pages/history">歴史</a></li>
           </ul>
         </li>
-        <li><a>資料</a></li>
+        <li><a href="">資料</a></li>
         <li>
           過去開催分
           <ul>
-            <li><a>JTF2020</a></li>
-            <li><a>JTF2020w</a></li>
+            <li><a href="https://2015.techfesta.jp">JTF2015</a></li>
+            <li><a href="https://2016.techfesta.jp">JTF2016</a></li>
+            <li><a href="">JTF2017</a></li>
+            <li><a href="">JTF2018</a></li>
+            <li><a href="">JTF2019</a></li>
+            <li><a href="/pages/jtf2020">JTF2020</a></li>
+            <li><a href="/pages/jtf2021w">JTF2021w</a></li>
           </ul>
         </li>
-        <li><a>メディア</a></li>
-        <li><a>Q&amp;A</a></li>
+        <li><a href="">メディア</a></li>
+        <li><a href="/pages/qa">Q&amp;A</a></li>
       </ul>
       <div>
         <input /><button>search</button>

@@ -17,7 +17,8 @@ defmodule JtfpartyWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
-    resources "/sessions", SessionController
+    resources "/pages", PageController, only: [:show]
+    resources "/sessions", SessionController, only: [:index, :show]
   end
 
   # Other scopes may use custom stacks.
