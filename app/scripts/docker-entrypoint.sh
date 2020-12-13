@@ -1,10 +1,16 @@
 #!/bin/sh
 
-#cd api && \
-#  mix ecto.create && \
-#  mix ecto.migrate && \
-#  mix test && \
-#  mix phx.server
+if [ "$DATABASE" = "postgres" ]
+then
+    echo "Waiting for postgres..."
+
+    while ! nc -z $SQL_HOST $SQL_PORT; do
+      sleep 0.1
+    done
+
+    echo "PostgreSQL started"
+fi
+
 cd $HOME \
   && mix deps.get
 cd $HOME/assets \
@@ -15,9 +21,4 @@ cd $HOME \
   && mix ecto.migrate \
   && mix phx.server
 
-#cd api && \
-#  mix ecto.create && \
-#  mix ecto.migrate && \
-#  mix phx.gen.json \
-#    Chat Group groups name:string && \
-#  mix ecto.migrate
+exec "$@"
