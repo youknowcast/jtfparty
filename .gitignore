@@ -67,6 +67,6 @@ tags
 !.vscode/launch.json
 !.vscode/extensions.json
 *.code-workspace
-*.cache
-*.npm
-*.hex
+.cache
+.npm
+.hex
