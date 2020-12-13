@@ -1,0 +1,34 @@
+<nav>
+  過去開催分 ＞ <a>JTF2021w</a>
+</nav>
+
+<section class="phx-hero">
+  <img src="<%= Routes.static_path(@conn, "/images/jtf2021w_logo.png") %>" alt="JTF2021w Logo"/>
+  <h1>CFP 募集中!!</h1>
+ 
+  <img src="<%= Routes.static_path(@conn, "/images/share_tmp.png") %>" alt="JTF2021w Logo"/>
+  <img src="<%= Routes.static_path(@conn, "/images/iconfinder_RSS_4700671.png") %>" height=32 width=32 alt="JTF2021w Logo"/>
+</section>
+
+<section class="row">
+  <article class="column">
+    <img src="<%= Routes.static_path(@conn, "/images/2021_comment.png") %>" alt="JTF2021w Logo"/>
+  </article>
+</section>
+
+<section>
+  <h3>告知</h3>
+  <ul>
+    <li><a href="">開催趣旨(connpass)</a></li>
+    <li><a href="">無料チケット頒布中！！</a></li>
+    <li><a href="">CFP 募集中！</a></li>
+    <li><a href="/sessions">セッションリスト はこちら</a></li>
+  </ul>
+</section>
+
+<section>
+  <h3>ニュース</h3>
+  <ul>
+    <li></li>
+  </ul>
+</section>
