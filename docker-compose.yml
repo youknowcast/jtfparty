@@ -1,0 +1,40 @@
+version: "3.7"
+
+services:
+
+  app:
+    build: ./app
+    container_name: app
+    hostname: app
+    env_file:
+      - ./app/.env
+    volumes:
+      - ./app:/home/app
+    ports:
+      - "4000:4000"
+    networks:
+      - private
+    depends_on:
+      - db
+    tty: true
+    stdin_open: true
+
+  db:
+    build: ./db
+    container_name: db
+    hostname: db
+    env_file:
+      - ./db/.env
+    volumes:
+      - ./db/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+    ports:
+      - 15432:5432
+    networks:
+      - private
+  
+volumes:
+ postgresdata:
+  driver: local
+networks:
+ private:
+  driver: bridge
