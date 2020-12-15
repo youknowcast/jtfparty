@@ -35,22 +35,13 @@
   margin: -1rem 0 2rem;
 }
 
-main {
-  display: inline-block;
+section h3 {
+  text-align: left;
 }
 
-div.menu {
-  display: inline-block;
-  vertical-align: top;
-  ul {
-    list-style: none;
-  }
-}
-
-section.session-description {
-  ul {
-    list-style: none;
-  }
+section ul {
+  text-align: left;
+  list-style: none;
 }
 
 .twitter-timeline-wrapper {
