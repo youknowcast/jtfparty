@@ -37,10 +37,6 @@ npm-debug.log
 
 # env file
 .env
-.DS_Store
-
-# env file
-.env
 
 # dotfiles
 .cache
