@@ -12,6 +12,11 @@ $ git clone https://github.com/youknowcast/jtfparty.git
 $ cat app/.env.tmpl > app/.env
 $ cat db/.env.tmpl > db/.env
 $ make rebuild  # docker-compose up -d --build
+
+# optional
+$ make ps #
+$ make
+$ make curl # curl -I http://localhost:4000 
 ```
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.

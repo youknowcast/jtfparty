@@ -14,6 +14,7 @@ then
 fi
 
 cd $HOME \
+  && mix local.hex --force \
   && mix deps.get
 cd $HOME/assets \
   && npm install \
@@ -21,6 +22,7 @@ cd $HOME/assets \
 cd $HOME \
   && mix ecto.create \
   && mix ecto.migrate \
+  && mix run priv/repo/seeds.exs \
   && mix phx.server
 
 exec "$@"
